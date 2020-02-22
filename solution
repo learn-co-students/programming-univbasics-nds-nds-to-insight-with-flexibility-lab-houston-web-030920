@@ -1,0 +1,63 @@
+[     ```this is an array with many hashes inside
+  { 
+    :title => movie_data[:title],
+    :worldwide_gross => movie_data[:worldwide_gross],
+    :release_year => movie_data[:release_year],
+    :studio => movie_data[:studio],
+    :director_name => director_name
+  },
+    { 
+    :title => movie_data[:title],
+    :worldwide_gross => movie_data[:worldwide_gross],
+    :release_year => movie_data[:release_year],
+    :studio => movie_data[:studio],
+    :director_name => director_name
+  },
+    { 
+    :title => movie_data[:title],
+    :worldwide_gross => movie_data[:worldwide_gross],
+    :release_year => movie_data[:release_year],
+    :studio => movie_data[:studio],
+    :director_name => director_name
+  },
+  .... ....  .... ....,
+    { 
+    :title => movie_data[:title],
+    :worldwide_gross => movie_data[:worldwide_gross],
+    :release_year => movie_data[:release_year],
+    :studio => movie_data[:studio],
+    :director_name => director_name
+  }
+  ]
+  
+  
+  [
+      {
+        :director_name => "Byron Poodle"
+        :worldwide_gross => 2,
+        :release_year => 2014,
+        :studio => "Karbit Poodles",
+        :title => "The Fire Hydrant of Doom"
+      }, 
+      {
+        :director_name => "Byron Poodle"
+        :worldwide_gross => 2,
+        :release_year => 2014,
+        :studio => "Karbit Poodles",
+        :title => "The Fire Hydrant of Doom"
+      }, 
+      {
+        :director_name => "Byron Poodle"
+        :worldwide_gross => 2,
+        :release_year => 2014,
+        :studio => "Karbit Poodles",
+        :title => "The Fire Hydrant of Doom"
+      }, 
+      {
+        :director_name => "Byron Poodle"
+        :worldwide_gross => 2,
+        :release_year => 2014,
+        :studio => "Karbit Poodles",
+        :title => "The Fire Hydrant of Doom"
+      }, 
+  ]
