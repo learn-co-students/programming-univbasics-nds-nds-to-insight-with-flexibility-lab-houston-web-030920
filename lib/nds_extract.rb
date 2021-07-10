@@ -16,9 +16,11 @@ def flatten_a_o_a(aoa)
     end
     i += 1
   end
-
+  
   result
 end
+
+#------------------------------------------------------
 
 def movie_with_director_name(director_name, movie_data)
   { 
@@ -28,8 +30,10 @@ def movie_with_director_name(director_name, movie_data)
     :studio => movie_data[:studio],
     :director_name => director_name
   }
+  
 end
 
+#------------------------------------------------------
 
 # Your code after this point
 
@@ -48,8 +52,18 @@ def movies_with_director_key(name, movies_collection)
   # Array of Hashes where each Hash represents a movie; however, they should all have a
   # :director_name key. This addition can be done by using the provided
   # movie_with_director_name method
+  
+  
+  row_index = 0 
+  while row_index < movies_collection.count do 
+    movies_collection[row_index][:director_name] = name
+    row_index += 1 
+  end 
+  
+  movies_collection
 end
 
+#------------------------------------------------------------
 
 def gross_per_studio(collection)
   # GOAL: Given an Array of Hashes where each Hash represents a movie,
@@ -63,7 +77,28 @@ def gross_per_studio(collection)
   #
   # Hash whose keys are the studio names and whose values are the sum
   # total of all the worldwide_gross numbers for every movie in the input Hash
+  
+  
+  hash = {}
+  row_index = 0
+  
+  while row_index < collection.count do
+    
+    temp_movie = collection[row_index]
+    if !hash[temp_movie[:studio]]
+      hash[temp_movie[:studio]] = temp_movie[:worldwide_gross]
+      
+    else
+      hash[temp_movie[:studio]] += temp_movie[:worldwide_gross]
+    end 
+    
+    
+    row_index += 1 
+  end 
+  hash
 end
+
+#------------------------------------------------------------
 
 def movies_with_directors_set(source)
   # GOAL: For each director, find their :movies Array and stick it in a new Array
@@ -76,9 +111,22 @@ def movies_with_directors_set(source)
   #
   # Array of Arrays containing all of a director's movies. Each movie will need
   # to have a :director_name key added to it.
+  
+   
+  new_array = []
+  row_index = 0 
+  
+  while row_index < source.count do 
+    new_array << movies_with_director_key(source[row_index][:name], source[row_index][:movies])
+    row_index += 1 
+  end
+  new_array
 end
 
-# ----------------    End of Your Code Region --------------------
+
+
+
+# ----------------    End of Your Code Region ----------------
 # Don't edit the following code! Make the methods above work with this method
 # call code. You'll have to "see-saw" to get this to work!
 
